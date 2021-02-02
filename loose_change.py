@@ -7,7 +7,7 @@ def loose_change(cents):
         'Pennies': 0
     }
 
-    if (isinstance(cents, int) or isinstance(cents, float)) and cents > 0 :
+    if (isinstance(cents, (float,int)) and cents > 0 :
 
         conversion_dict = {
             'Quarters': 25,
