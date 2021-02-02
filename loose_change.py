@@ -8,9 +8,8 @@ def loose_change(cents):
         remainder = int(cents)
 
         for k, v in change_dict.items():
+            
             change_dict[k] = remainder // conversion_dict[k]
-
-            if change_dict[k] != 0:
-                remainder = remainder % conversion_dict[k]
+            remainder = remainder % conversion_dict[k]
 
     return change_dict
